@@ -36,7 +36,7 @@ You should also note the `./app-frontend/src/main/.config` and `./app-backend/sr
 ### Set Environment
  Before you can run the project you need to set it up...
  
- You can setup **dev** environment using this command: `bash build-and-install.sh --setup --set-env=dev` 
+ You can setup **dev** environment using this command: `bash build-and-install.sh --install --set-env=dev` 
  
 **NOTE:** Install whatever other node packages the script asks and re-run the script
  
