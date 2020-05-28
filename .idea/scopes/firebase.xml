@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="firebase" pattern="file[thunderstorm]:firebase/src//*" />
-</component>

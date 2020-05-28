@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="bug-report" pattern="file[thunderstorm]:bug-report/src//*" />
-</component>

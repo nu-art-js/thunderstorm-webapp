@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="user-account" pattern="file[thunderstorm]:user-account/src//*" />
-</component>

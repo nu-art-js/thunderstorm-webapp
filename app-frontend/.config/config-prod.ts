@@ -19,11 +19,11 @@
 
 export const config = {
 	HttpModule: {
-		origin: "https://us-central1-nu-art-thunderstorm.cloudfunctions.net/api",
+		origin: "https://us-central1-thunderstorm-staging.cloudfunctions.net/api",
 		timeout: 10000
 	},
 	frontend: {
-		origin: "https://nu-art-thunderstorm.firebaseapp.com",
+		origin: "https://thunderstorm-staging.firebaseapp.com",
 	},
 	ExampleModule: {
 		remoteUrl: "/v1/sample/endpoint-example"
