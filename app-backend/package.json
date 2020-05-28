@@ -1,0 +1,74 @@
+{
+  "name": "app-backend",
+  "version": "1.1.0",
+  "description": "Backend hello world",
+  "keywords": [
+    "TacB0sS",
+    "backend",
+    "boilerplate",
+    "express",
+    "infra",
+    "nu-art",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:nu-art-js/thunderstorm.git"
+  },
+  "license": "Apache-2.0",
+  "author": "TacB0sS",
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "launch": "tsc --watch & firebase serve --only functions",
+    "lint": "tslint --project './tsconfig.json'",
+    "serve": "cd .. && bash ./build-and-install.sh -lb -nb"
+  },
+  "dependencies": {
+    "@app/app-shared": "~0.0.1",
+    "@nu-art/bug-report": "~0.25.0",
+    "@nu-art/db-api-generator": "~0.25.0",
+    "@nu-art/firebase": "~0.25.0",
+    "@nu-art/live-docs": "~0.25.0",
+    "@nu-art/permissions": "~0.25.0",
+    "@nu-art/push-pub-sub": "~0.25.0",
+    "@nu-art/storm": "~0.25.0",
+    "@nu-art/thunderstorm": "~0.25.0",
+    "@nu-art/ts-common": "~0.25.0",
+    "@nu-art/user-account": "~0.25.0",
+    "@slack/web-api": "^5.8.1",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "firebase": "^7.2.3",
+    "firebase-admin": "8.9.0",
+    "firebase-functions": "^3.3.0",
+    "fs": "0.0.1-security",
+    "js-base64": "^2.5.1",
+    "module-alias": "^2.2.0",
+    "moment": "^2.24.0",
+    "request": "^2.88.0",
+    "use-strict": "^1.0.1"
+  },
+  "devDependencies": {
+    "@nu-art/testelot": "~0.0.0",
+    "@types/body-parser": "^1.17.0",
+    "@types/debug": "^4.1.2",
+    "@types/express": "^4.16.1",
+    "@types/js-base64": "^2.3.1",
+    "@types/request": "^2.48.3",
+    "@types/saml2-js": "^1.6.8",
+    "firebase-functions-test": "^0.1.6",
+    "typescript": "^3.3.3333"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "_moduleAliases": {
+    "@consts": "dist/consts",
+    "@modules": "dist/modules",
+    "@shared": "dist/app-shared"
+  }
+}

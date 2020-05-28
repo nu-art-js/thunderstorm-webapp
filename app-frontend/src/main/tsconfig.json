@@ -1,0 +1,35 @@
+{
+  "extends": "../../../dev-tools/typescript/tsconfig-lib-tsx.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "../../build",
+    "rootDir": ".",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@consts/*": [
+        "consts/*"
+      ],
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@renderers/*": [
+        "renderers/*"
+      ],
+      "@res/*": [
+        "res/*"
+      ],
+      "@shared/*": [
+        "app-shared/*"
+      ],
+      "@styles/*": [
+        "res/styles/*"
+      ]
+    },
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
+  }
+}

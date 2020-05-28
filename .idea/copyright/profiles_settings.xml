@@ -1,0 +1,20 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="app-backend" copyright="app-backend" />
+      <element module="app-frontend" copyright="app-frontend" />
+      <element module="ts-common" copyright="ts-common" />
+      <element module="testelot" copyright="testelot" />
+      <element module="firebase" copyright="firebase" />
+      <element module="storm" copyright="storm" />
+      <element module="thunderstorm" copyright="thunderstorm" />
+      <element module="permissions" copyright="permissions" />
+      <element module="live-docs" copyright="live-docs" />
+      <element module="user-account" copyright="user-account" />
+      <element module="db-api-generator" copyright="db-api-generator" />
+      <element module="bug-report" copyright="bug-report" />
+      <element module="push-pub-sub" copyright="push-pub-sub" />
+      <element module="neural" copyright="neural" />
+    </module2copyright>
+  </settings>
+</component>

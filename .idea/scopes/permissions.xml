@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="permissions" pattern="!file[thunderstorm]:permissions/src//*" />
+</component>

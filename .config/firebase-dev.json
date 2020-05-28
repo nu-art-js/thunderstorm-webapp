@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "source": "app-backend",
+    "ignore": [
+      "src",
+      ".config",
+      "dist-test",
+      "deploy.js",
+      "node_modules"
+    ],
+    "predeploy": [
+      "echo \"Trying to deploy DEV env... Failing\" && exit 2"
+    ]
+  },
+  "hosting": {
+    "public": "app-frontend/dist/dev",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
