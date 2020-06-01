@@ -19,11 +19,11 @@
 
 export const config = {
 	HttpModule: {
-		origin: "https://us-central1-thunderstorm-staging.cloudfunctions.net/api",
+		origin: "https://us-central1-nu-art-thunderstorm.cloudfunctions.net/api",
 		timeout: 10000
 	},
 	frontend: {
-		origin: "https://thunderstorm-staging.firebaseapp.com",
+		origin: "https://nu-art-thunderstorm.firebaseapp.com",
 	},
 	ExampleModule: {
 		remoteUrl: "/v1/sample/endpoint-example"
@@ -34,21 +34,21 @@ export const config = {
 	PushPubSubModule: {
 		publicKeyBase64: 'BF0GqqEoe1UmqcU-dg3Dse_2ctkaq5uFpFuR6il1U9A3HkvYcL83I8yC_rX-G8mM8M0hnH5TqcSIsHScd4LTS28'
 	},
-	LocalizationModule: {
+	LocaleModule: {
 		defaultLocale: "en",
-		locales: {
-			"en": {
+		locales: [
+			{
+				locale: "en",
 				label: "Language_English",
 				icon: "languages/en",
+				texts: require(`./res/localization/en`)
 			},
-			"nl": {
+			{
+				locale: "nl",
 				label: "Language_Dutch",
-				icon: "languages/nl"
+				icon: "languages/nl",
+				texts: require(`./res/localization/nl`)
 			}
-		},
-		languages: {
-			"en": require(`./res/localization/en`),
-			"nl": require(`./res/localization/nl`),
-		}
+		]
 	}
 };

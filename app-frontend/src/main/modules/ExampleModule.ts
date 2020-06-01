@@ -18,14 +18,10 @@
 
 import {Module,} from "@nu-art/ts-common";
 
-import {
-	HttpModule,
-	ThunderDispatcher
-} from "@nu-art/thunderstorm/frontend";
+import {HttpModule} from "@nu-art/thunderstorm/frontend";
 import {
 	CommonBodyReq,
-	ExampleApiPostType,
-	TestDispatch
+	ExampleApiPostType
 } from "@app/app-shared";
 import {HttpMethod} from "@nu-art/thunderstorm";
 
@@ -34,13 +30,6 @@ type Config = {
 }
 
 export const RequestKey_PostApi = "PostApi";
-export const exampleDispatcher = new ThunderDispatcher<TestDispatch, 'testDispatch'>('testDispatch');
-
-export const dispatchAll = () => {
-	exampleDispatcher.dispatchUI([]);
-	exampleDispatcher.dispatchModule([])
-};
-
 
 export class ExampleModule_Class
 	extends Module<Config> {
