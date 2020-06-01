@@ -19,7 +19,6 @@
 // tslint:disable-next-line:no-import-side-effect
 import 'module-alias/register'
 import {
-	ForceUpgrade,
 	RouteResolver,
 	Storm
 } from "@nu-art/thunderstorm/backend";
@@ -27,12 +26,8 @@ import {Environment} from "./config";
 import {
 	ExampleModule,
 } from "@modules/ExampleModule";
-import {Backend_ModulePack_LiveDocs} from "@nu-art/live-docs/backend";
 import {Module} from "@nu-art/ts-common";
-import {Backend_ModulePack_Permissions} from "@nu-art/permissions/backend";
-import {Backend_ModulePack_BugReport} from "@nu-art/bug-report/backend";
 import {ProjectFirestoreBackup} from "@nu-art/firebase/backend-firestore-backup";
-import {PushPubSubModule} from '@nu-art/push-pub-sub/backend';
 import {
 	Slack_ServerApiError,
 	SlackModule
@@ -45,17 +40,12 @@ console.log(`Starting server v${packageJson.version} with env: ${Environment.nam
 
 const modules: Module[] = [
 	ExampleModule,
-	ForceUpgrade,
 	ProjectFirestoreBackup,
 	SlackModule,
 	Slack_ServerApiError,
-	PushPubSubModule
 ];
 
 const _exports = new Storm()
-	.addModules(...Backend_ModulePack_BugReport)
-	.addModules(...Backend_ModulePack_LiveDocs)
-	.addModules(...Backend_ModulePack_Permissions)
 	.addModules(...modules)
 	.setInitialRouteResolver(new RouteResolver(require, __dirname, "api"))
 	.setInitialRoutePath("/api")

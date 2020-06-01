@@ -17,20 +17,42 @@
  */
 
 import * as React from "react";
-import {Hello} from "../Hello";
-
+import {
+	ExampleModule,
+	RequestKey_PostApi,
+} from "@modules/ExampleModule";
+import {
+	BaseComponent,
+	OnRequestListener
+} from "@nu-art/thunderstorm/frontend";
 
 export class Page_Home
-	extends React.Component {
-	constructor(props: {}) {
-		super(props);
+	extends BaseComponent<{}, { label: string }>
+	implements OnRequestListener {
 
-		this.state = {};
+	constructor(props: any) {
+		super(props);
+		this.state = {
+			label: "Server Api Call"
+		};
 	}
 
 	render() {
 		return <>
-			<Hello/>
+			<div className="ll_h_c"><h1 onClick={ExampleModule.exampleApiCall}>{this.state.label}</h1></div>
 		</>;
 	}
+
+	__onRequestCompleted = (key: string, success: boolean) => {
+		if (!success)
+			return;
+
+		switch (key) {
+			default:
+				return;
+
+			case RequestKey_PostApi:
+				this.setState({label: ExampleModule.getMessage()});
+		}
+	};
 }

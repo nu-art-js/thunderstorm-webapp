@@ -33,16 +33,9 @@
     "moment": "2.24.0"
   },
   "devDependencies": {
-    "@app/app-shared": "~0.25.0",
-    "@nu-art/bug-report": "~0.25.0",
-    "@nu-art/db-api-generator": "~0.25.0",
-    "@nu-art/firebase": "~0.25.0",
-    "@nu-art/live-docs": "~0.25.0",
-    "@nu-art/permissions": "~0.25.0",
-    "@nu-art/push-pub-sub": "~0.25.0",
+    "@app/app-shared": "~0.0.1",
     "@nu-art/thunderstorm": "~0.25.0",
     "@nu-art/ts-common": "~0.25.0",
-    "@nu-art/user-account": "~0.25.0",
     "@types/history": "^4.7.2",
     "@types/qs": "^6.5.2",
     "@types/react": "^16.8.7",

@@ -1,46 +1,89 @@
 {
-  "_config": {
-    "default": {
-      "ExampleModule": {
-        "options": [
-          "Hi",
-          "How are you",
-          "Hello World",
-          "Backend example"
+  "default": {
+    "ExampleModule": {
+      "dispatchNum": "noa",
+      "options": [
+        "Hi",
+        "How are you",
+        "Hello World",
+        "Backend example"
+      ]
+    },
+    "ForceUpgrade": {
+      "app": "1.1.0",
+      "browser": {
+        "chrome": "80.0.3987.148"
+      }
+    },
+    "HttpServer": {
+      "bodyParserLimit": 200,
+      "cors": {
+        "headers": [
+          "x-session-id",
+          "x-browser-type",
+          "x-app-version"
+        ],
+        "methods": [
+          "GET",
+          "POST"
         ]
       },
-      "HttpServer": {
-        "cors": {
-          "headers": [
-            "content-type"
-          ],
-          "methods": [
-            "GET",
-            "POST"
-          ],
-          "origins": [
-            "http://localhost:5001",
-            "https://localhost:5001"
-          ]
-        },
-        "host": "localhost"
-      },
-      "isDebug": true,
-      "name": "default"
+      "host": "localhost"
     },
-    "dev": {
-      "HttpServer": {
-        "baseUrl": "http:////localhost:5000/thunderstorm-staging/us-central1"
-      },
-      "isDebug": true,
-      "name": "dev"
+    "JiraBugReportIntegrator": {
+      "jiraProject": "BR"
     },
-    "prod": {
-      "HttpServer": {
-        "baseUrl": "https:////us-central1-thunderstorm-staging.cloudfunctions.net"
-      },
-      "isDebug": false,
-      "name": "prod"
-    }
+    "JiraModule": {
+      "auth": {
+        "apiKey": "jira-api-key",
+        "email": "user-email"
+      }
+    },
+    "SlackModule": {
+      "throttlingTime": 60000,
+      "token": "slack-token"
+    },
+    "Slack_ServerApiError": {
+      "exclude": [
+        "4 DEADLINE_EXCEEDED: Deadline Exceeded",
+        "14 UNAVAILABLE: Connect Failed",
+        "No connection established"
+      ],
+      "headers": [
+        "x-test"
+      ]
+    },
+    "isDebug": true,
+    "name": "default"
+  },
+  "staging": {
+    "HttpServer": {
+      "baseUrl": "https:////us-central1-thunderstorm-staging.cloudfunctions.net",
+      "cors": {
+        "origins": [
+          "https://thunderstorm-staging.firebaseapp.com"
+        ]
+      }
+    },
+    "SlackModule": {
+      "defaultChannel": "__critical__"
+    },
+    "isDebug": false,
+    "name": "prod"
+  },
+  "prod": {
+    "HttpServer": {
+      "baseUrl": "https:////us-central1-nu-art-thunderstorm.cloudfunctions.net",
+      "cors": {
+        "origins": [
+          "https://nu-art-thunderstorm.firebaseapp.com"
+        ]
+      }
+    },
+    "SlackModule": {
+      "defaultChannel": "__critical__"
+    },
+    "isDebug": false,
+    "name": "prod"
   }
 }

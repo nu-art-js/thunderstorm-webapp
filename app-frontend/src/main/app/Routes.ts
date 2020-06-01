@@ -17,15 +17,16 @@
  */
 
 import {RoutingModule} from "@nu-art/thunderstorm/frontend";
-import {Page_Playground} from "./pages/Page_Playground";
+import {Page_Playground} from "./pages/playground/Page_Playground";
+import {Page_Home} from "./pages/home/Page_Home";
 
 export const Route_Home = "home";
-export const Route_Login = "login";
 export const Route_Playground = "playground";
 
 export const registerRoutes = () => {
 	RoutingModule.clearRoutes();
 
 	//home route should be declared last
-	RoutingModule.addRoute(Route_Home, "/", Page_Playground).setLabel("Home").setExact(false);
+	RoutingModule.addRoute(Route_Playground, "/playground", Page_Playground).setLabel("Playground").setExact(true);
+	RoutingModule.addRoute(Route_Home, "/", Page_Home).setLabel("Home").setExact(false);
 };

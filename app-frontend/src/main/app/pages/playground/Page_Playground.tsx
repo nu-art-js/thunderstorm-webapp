@@ -21,11 +21,43 @@ import {
 	Playground,
 	PlaygroundScreen
 } from "@nu-art/thunderstorm/frontend";
-import {Hello} from "../Hello";
-import {selectStyles} from "./SelectStyle";
+import {Page_Home} from "../home/Page_Home";
+import {ICONS} from "@res/icons";
+import {COLORS} from '@res/colors';
 
-const icon__arrowClose = require('@res/images/icon__arrowClose.svg');
-const icon__arrowOpen = require('@res/images/icon__arrowOpen.svg');
+export const selectStyles = {
+	container: (provided: any) => ({
+		...provided,
+		width: 240,
+		fontSize: 13,
+		outline: "none"
+	}),
+	control: () => ({
+		border: "1px solid",
+		color: COLORS.blueGrey,
+		display: "flex",
+		height: 32,
+		fontSize: 13,
+		outline: "none"
+	}),
+	singleValue: (provided: any) => ({
+		...provided,
+		color: COLORS.blueGrey,
+		fontWeight: 500
+	}),
+	input: (provided: any) => ({
+		...provided,
+		color: "#fff"
+	}),
+	option: (provided: any, state: any) => ({
+		...provided,
+		backgroundColor: "unset",
+		color: COLORS.blueGrey,
+		':hover': {
+			backgroundColor: COLORS.veryLightPink
+		}
+	}),
+};
 
 export class Page_Playground
 	extends React.Component<{}> {
@@ -39,8 +71,8 @@ export class Page_Playground
 		const screens = this.getScreens();
 		return <Playground
 			selectStyle={selectStyles}
-			iconClose={icon__arrowClose}
-			iconOpen={icon__arrowOpen}
+			iconClose={ICONS.triangle_up(COLORS.veryLightPink, 12)}
+			iconOpen={ICONS.triangle_down(COLORS.veryLightPink, 12)}
 			screens={screens}
 		/>
 	}
@@ -49,7 +81,7 @@ export class Page_Playground
 		return [
 			{
 				name: "Hello",
-				getNode: () => <Hello/>
+				getNode: () => <Page_Home/>
 			},
 		];
 	}
