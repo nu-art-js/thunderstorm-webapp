@@ -24,6 +24,7 @@ import {
 import {Page_Home} from "../home/Page_Home";
 import {ICONS} from "@res/icons";
 import {COLORS} from '@res/colors';
+import {BugReport} from "@nu-art/bug-report/frontend";
 
 export const selectStyles = {
 	container: (provided: any) => ({
@@ -69,19 +70,21 @@ export class Page_Playground
 
 	render() {
 		const screens = this.getScreens();
-		return <Playground
-			selectStyle={selectStyles}
-			iconClose={ICONS.triangle_up(COLORS.veryLightPink, 12)}
-			iconOpen={ICONS.triangle_down(COLORS.veryLightPink, 12)}
-			screens={screens}
-		/>
+		return <BugReport>
+			<Playground
+				selectStyle={selectStyles}
+				iconClose={ICONS.triangle_up(COLORS.veryLightPink, 12)}
+				iconOpen={ICONS.triangle_down(COLORS.veryLightPink, 12)}
+				screens={screens}
+			/>
+		</BugReport>
 	}
 
 	getScreens(): PlaygroundScreen[] {
 		return [
 			{
 				name: "Hello",
-				getNode: () => <Page_Home/>
+				renderer: Page_Home
 			},
 		];
 	}

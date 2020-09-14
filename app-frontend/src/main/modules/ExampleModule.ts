@@ -22,7 +22,7 @@ import {HttpModule} from "@nu-art/thunderstorm/frontend";
 import {
 	CommonBodyReq,
 	ExampleApiPostType
-} from "@app/app-shared";
+} from "@app/app-shared/";
 import {HttpMethod} from "@nu-art/thunderstorm";
 
 type Config = {

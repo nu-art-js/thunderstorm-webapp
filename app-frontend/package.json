@@ -34,8 +34,9 @@
   },
   "devDependencies": {
     "@app/app-shared": "~0.0.1",
-    "@nu-art/thunderstorm": "~0.25.0",
-    "@nu-art/ts-common": "~0.25.0",
+    "@nu-art/bug-report": "~0.27.0",
+    "@nu-art/thunderstorm": "~0.27.0",
+    "@nu-art/ts-common": "~0.27.0",
     "@types/history": "^4.7.2",
     "@types/qs": "^6.5.2",
     "@types/react": "^16.8.7",
