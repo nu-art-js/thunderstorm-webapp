@@ -1,0 +1,30 @@
+{
+  "functions": {
+    "source": "app-backend",
+    "ignore": [
+      "src",
+      ".config",
+      "dist-test",
+      "deploy.js",
+      "node_modules"
+    ],
+    "predeploy": [
+      "echo \"Thunderstorm - Local environment is not deployable... Aborting...\" && exit 2"
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": "8001"
+    },
+    "database": {
+      "port": "8002"
+    },
+    "firestore": {
+      "port": "8003"
+    },
+    "ui": {
+      "enabled": true,
+      "port": "8009"
+    }
+  }
+}
