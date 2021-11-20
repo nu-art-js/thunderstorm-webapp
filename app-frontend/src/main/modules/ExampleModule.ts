@@ -18,7 +18,7 @@
 
 import {Module,} from "@nu-art/ts-common";
 
-import {HttpModule} from "@nu-art/thunderstorm/frontend";
+import {XhrHttpModule} from "@nu-art/thunderstorm/frontend";
 import {
 	CommonBodyReq,
 	ExampleApiPostType
@@ -45,7 +45,7 @@ export class ExampleModule_Class
 		this.logInfo("getting label from server");
 		const bodyObject: CommonBodyReq = {message: this.message || "No message"};
 
-		HttpModule
+		XhrHttpModule
 			.createRequest<ExampleApiPostType>(HttpMethod.POST, RequestKey_PostApi)
 			.setJsonBody(bodyObject)
 			.setRelativeUrl("/v1/sample/another-endpoint")

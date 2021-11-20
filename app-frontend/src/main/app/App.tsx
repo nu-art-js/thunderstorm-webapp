@@ -17,19 +17,10 @@
  */
 
 import * as React from 'react';
-import {
-	BaseComponent,
-	Dialog,
-	PopupMenu,
-	RoutingModule,
-	Toaster,
-	WrapperProps
-} from "@nu-art/thunderstorm/frontend";
-
-import {registerRoutes} from "./Routes";
+import {WrapperProps} from "@nu-art/thunderstorm/frontend";
 
 export class App
-	extends BaseComponent<WrapperProps> {
+	extends React.Component<WrapperProps> {
 
 	public static dropBlocker<T>(ev: React.DragEvent<T>) {
 		ev.preventDefault();
@@ -37,13 +28,9 @@ export class App
 	};
 
 	render() {
-		registerRoutes();
 		return (
 			<div onDrop={App.dropBlocker} onDragOver={App.dropBlocker}>
-				{RoutingModule.getRoutesMap()}
-				<Dialog/>
-				<Toaster/>
-				<PopupMenu/>
+				Hello World
 			</div>);
 	}
 }

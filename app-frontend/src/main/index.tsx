@@ -21,14 +21,12 @@ import './res/styles/styles.scss';
 
 import {App} from "./app/App";
 import {Thunder,} from "@nu-art/thunderstorm/frontend";
-import {ExampleModule} from "@modules/ExampleModule";
 
-const modules = [
-	ExampleModule,
-];
+// const modules = [
+// 	ExampleModule,
+// ];
 
 new Thunder()
 	.setConfig(require("./config").config)
-	.addModules(...modules)
 	.setMainApp(App)
 	.build();

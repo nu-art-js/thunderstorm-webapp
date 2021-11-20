@@ -51,10 +51,6 @@ class WebpackEnvConfig {
 		throw new Error("Abstract method");
 	}
 
-	getPrettifierPlugin() {
-		throw new Error("Abstract method");
-	}
-
 	getDevServerSSL() {
 		throw new Error("Abstract method");
 	}

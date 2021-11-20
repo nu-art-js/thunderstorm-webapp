@@ -64,7 +64,7 @@ class ProdConfig
 	}
 
 	getServerPort() {
-		return 5000;
+		return 8000;
 	}
 }
 

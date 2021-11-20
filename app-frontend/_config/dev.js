@@ -45,26 +45,6 @@ class DevConfig
 	htmlMinificationOptions() {
 	}
 
-	getPrettifierPlugin() {
-		return new HtmlBeautifyPlugin({
-			config: {
-				html: {
-					end_with_newline: true,
-					indent_size: 2,
-					indent_with_tabs: true,
-					indent_inner_html: true,
-					preserve_newlines: true,
-					unformatted: [
-						'i',
-						'b',
-						'span'
-					]
-				}
-			},
-			replace: [' type="text/javascript"']
-		})
-	}
-
 	getDevServerSSL() {
 		return {
 			key: fs.readFileSync('./.config/ssl/server-key.pem'),
@@ -74,7 +54,7 @@ class DevConfig
 	}
 
 	getHostingPort() {
-		return 5001;
+		return 8000;
 	}
 }
 

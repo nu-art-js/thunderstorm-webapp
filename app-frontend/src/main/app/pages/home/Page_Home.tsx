@@ -17,14 +17,9 @@
  */
 
 import * as React from "react";
-import {
-	ExampleModule,
-	RequestKey_PostApi,
-} from "@modules/ExampleModule";
-import {
-	BaseComponent,
-	OnRequestListener
-} from "@nu-art/thunderstorm/frontend";
+import {ExampleModule, RequestKey_PostApi,} from "@modules/ExampleModule";
+import {BaseComponent,} from "@nu-art/thunderstorm/frontend";
+import {OnRequestListener} from "@nu-art/thunderstorm";
 
 export class Page_Home
 	extends BaseComponent<{}, { label: string }>

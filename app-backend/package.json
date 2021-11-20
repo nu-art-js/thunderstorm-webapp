@@ -2,6 +2,7 @@
   "name": "app-backend",
   "version": "1.1.0",
   "description": "Backend hello world",
+  "private": true,
   "keywords": [
     "TacB0sS",
     "backend",
@@ -27,10 +28,10 @@
   },
   "dependencies": {
     "@app/app-shared": "file:.dependencies/app-shared",
-    "@nu-art/firebase": "~0.27.0",
-    "@nu-art/storm": "~0.27.0",
-    "@nu-art/thunderstorm": "~0.27.0",
-    "@nu-art/ts-common": "~0.27.0",
+    "@nu-art/firebase": "~0.33.0",
+    "@nu-art/storm": "~0.33.0",
+    "@nu-art/thunderstorm": "~0.33.0",
+    "@nu-art/ts-common": "~0.33.0",
     "@slack/web-api": "^5.8.1",
     "body-parser": "^1.18.3",
     "compression": "^1.7.4",
@@ -55,7 +56,7 @@
     "@types/request": "^2.48.3",
     "@types/saml2-js": "^1.6.8",
     "firebase-functions-test": "^0.1.6",
-    "typescript": "^3.3.3333"
+    "typescript": "~4.1.0"
   },
   "engines": {
     "node": "10"
