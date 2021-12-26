@@ -23,7 +23,6 @@
   "scripts": {
     "build": "tsc",
     "launch": "tsc --watch & firebase serve --only functions",
-    "lint": "tslint --project './tsconfig.json'",
     "serve": "cd .. && bash ./build-and-install.sh -lb -nb"
   },
   "dependencies": {
@@ -37,17 +36,17 @@
     "compression": "^1.7.4",
     "debug": "^3.1.0",
     "express": "^4.16.3",
-    "firebase": "^9.0.0",
-    "firebase-admin": "^9.11.1",
-    "firebase-functions": "^3.15.4",
+    "firebase": "^9.6.1",
+    "firebase-admin": "^10.0.1",
+    "firebase-functions": "^3.16.0",
     "fs": "0.0.1-security",
     "js-base64": "^2.5.1",
     "module-alias": "^2.2.0",
     "moment": "^2.24.0",
-    "request": "^2.88.0",
     "use-strict": "^1.0.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@nu-art/testelot": "~0.0.0",
     "@types/body-parser": "^1.17.0",
     "@types/debug": "^4.1.2",
@@ -56,10 +55,10 @@
     "@types/request": "^2.48.3",
     "@types/saml2-js": "^1.6.8",
     "firebase-functions-test": "^0.1.6",
-    "typescript": "~4.1.0"
+    "typescript": "~4.5.4"
   },
   "engines": {
-    "node": "10"
+    "node": "16"
   },
   "_moduleAliases": {
     "@consts": "dist/consts",

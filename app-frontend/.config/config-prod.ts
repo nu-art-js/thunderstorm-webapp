@@ -31,6 +31,9 @@ export const config = {
 	ForceUpgrade: {
 		assertVersionUrl: "/v1/version/assert"
 	},
+	FirebaseModule: {
+		local: {}
+	},
 	PushPubSubModule: {
 		publicKeyBase64: 'BF0GqqEoe1UmqcU-dg3Dse_2ctkaq5uFpFuR6il1U9A3HkvYcL83I8yC_rX-G8mM8M0hnH5TqcSIsHScd4LTS28'
 	},

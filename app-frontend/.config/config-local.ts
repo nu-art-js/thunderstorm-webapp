@@ -19,37 +19,40 @@
 
 export const config = {
 	XhrHttpModule: {
-		origin: 'https://us-central1-thunderstorm-staging.cloudfunctions.net/api',
-		timeout: 10000
+		// origin: "http://192.168.1.5:3000",
+		origin: "http://localhost:5000/thunderstorm-staging/us-central1/api",
+		timeout: 30000,
+		compress: false
 	},
 	frontend: {
-		origin: 'https://thunderstorm-staging.firebaseapp.com',
-	},
-	ExampleModule: {
-		remoteUrl: '/v1/sample/endpoint-example'
-	},
-	ForceUpgrade: {
-		assertVersionUrl: '/v1/version/assert'
+		// origin: "http://192.168.1.5:3010",
+		origin: "http://localhost:5001",
 	},
 	FirebaseModule: {
 		local: {}
 	},
 	PushPubSubModule: {
-		publicKeyBase64: 'BH_Awj-nfzwZBMnzRgyfQN2mIZPbxV9JqLWljlQcJbHtz-2IxKPvon78Wt_NLF0yn4QkMIErSlqkAm8T75ySM84'
+		publicKeyBase64: 'BBsKBw0R-mITlCSAOtCiHCLvKl-EetCmt5JKMg8L8ev1GqBEpDryum8ve3htIlbN3cjV1MLDFQnk0a8Wfks7cFk'
+	},
+	ExampleModule: {
+		remoteUrl: "/v1/sample/endpoint-example"
+	},
+	ForceUpgrade: {
+		assertVersionUrl: "/v1/version/assert"
 	},
 	LocaleModule: {
-		defaultLocale: 'en',
+		defaultLocale: "en",
 		locales: [
 			{
-				locale: 'en',
-				label: 'Language_English',
-				icon: 'languages/en',
+				locale: "en",
+				label: "Language_English",
+				icon: "languages/en",
 				texts: require(`./res/localization/en`)
 			},
 			{
-				locale: 'nl',
-				label: 'Language_Dutch',
-				icon: 'languages/nl',
+				locale: "nl",
+				label: "Language_Dutch",
+				icon: "languages/nl",
 				texts: require(`./res/localization/nl`)
 			}
 		]

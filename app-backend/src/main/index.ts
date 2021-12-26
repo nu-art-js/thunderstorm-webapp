@@ -17,30 +17,20 @@
  */
 
 // tslint:disable-next-line:no-import-side-effect
-import 'module-alias/register'
-import {
-	RouteResolver,
-	Storm
-} from "@nu-art/thunderstorm/backend";
-import {Environment} from "./config";
-import {
-	ExampleModule,
-} from "@modules/ExampleModule";
-import {Module} from "@nu-art/ts-common";
-import {ProjectFirestoreBackup} from "@nu-art/firebase/backend-firestore-backup";
-import {
-	Slack_ServerApiError,
-	SlackModule
-} from "@nu-art/storm/slack";
+import 'module-alias/register';
+import {RouteResolver, Storm} from '@nu-art/thunderstorm/backend';
+import {Environment} from './config';
+import {ExampleModule,} from '@modules/ExampleModule';
+import {Module} from '@nu-art/ts-common';
+import {Slack_ServerApiError, SlackModule} from '@nu-art/storm/slack';
 
-import * as functions from "firebase-functions";
+import * as functions from 'firebase-functions';
 
 const packageJson = require("./package.json");
 console.log(`Starting server v${packageJson.version} with env: ${Environment.name}`);
 
 const modules: Module[] = [
 	ExampleModule,
-	ProjectFirestoreBackup,
 	SlackModule,
 	Slack_ServerApiError,
 ];

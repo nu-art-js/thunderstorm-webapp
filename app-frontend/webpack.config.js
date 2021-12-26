@@ -37,9 +37,10 @@ module.exports = (env, argv) => {
 
 	return {
 		context: sourcePath,
+		target: ["web", "es2017"],
 		entry: {
 			main: './main/index.tsx',
-			ts_service_worker: './sw/index.ts',
+			service_worker: './sw/index.ts',
 		},
 		output: {
 			path: outputFolder,
@@ -66,7 +67,7 @@ module.exports = (env, argv) => {
 			historyApiFallback: true,
 			compress: true,
 			static: outputFolder,
-			https: envConfig.getDevServerSSL(),
+			server: {type: "https", options:envConfig.getDevServerSSL() },
 			port: envConfig.getHostingPort(),
 		},
 
@@ -107,7 +108,8 @@ module.exports = (env, argv) => {
 					use: {
 						loader: "ts-loader",
 						options: {
-							configFile: swConfig
+							configFile: swConfig,
+							transpileOnly: true,
 						}
 					}
 				},
@@ -115,9 +117,10 @@ module.exports = (env, argv) => {
 					test: /main\/.+\.tsx?$/,
 					include: [mainFolder],
 					use: {
-						loader: "awesome-typescript-loader",
+						loader: "ts-loader",
 						options: {
-							configFileName: mainConfig
+							configFile: mainConfig,
+							transpileOnly: true
 						}
 					}
 				},
@@ -173,7 +176,7 @@ module.exports = (env, argv) => {
 				template: "./main/index.ejs",
 				filename: "./index.html",
 				minify: envConfig.htmlMinificationOptions(),
-				excludeChunks: ['ts_service_worker']
+				excludeChunks: ['service_worker']
 			}),
 			new WebpackManifestPlugin(),
 		].filter(plugin => plugin),

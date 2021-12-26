@@ -56,6 +56,21 @@
     "isDebug": true,
     "name": "default"
   },
+  "dev": {
+    "HttpServer": {
+      "baseUrl": "https:////us-central1-thunderstorm-dev.cloudfunctions.net",
+      "cors": {
+        "origins": [
+          "https://thunderstorm-dev.firebaseapp.com"
+        ]
+      }
+    },
+    "SlackModule": {
+      "defaultChannel": "__critical__"
+    },
+    "isDebug": true,
+    "name": "dev"
+  },
   "staging": {
     "HttpServer": {
       "baseUrl": "https:////us-central1-thunderstorm-staging.cloudfunctions.net",
@@ -68,8 +83,8 @@
     "SlackModule": {
       "defaultChannel": "__critical__"
     },
-    "isDebug": false,
-    "name": "prod"
+    "isDebug": true,
+    "name": "staging"
   },
   "prod": {
     "HttpServer": {
