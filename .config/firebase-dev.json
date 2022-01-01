@@ -9,7 +9,9 @@
       "node_modules"
     ],
     "predeploy": [
-      "echo \"Trying to deploy DEV env... Failing\" && exit 2"
+      "rm ./app-backend/package-lock.json",
+      "npm --prefix ./app-backend install",
+      "npm --prefix ./app-backend run build"
     ]
   },
   "hosting": {
