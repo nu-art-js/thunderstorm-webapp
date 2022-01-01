@@ -40,21 +40,4 @@ export const config = {
 	ForceUpgrade: {
 		assertVersionUrl: "/v1/version/assert"
 	},
-	LocaleModule: {
-		defaultLocale: "en",
-		locales: [
-			{
-				locale: "en",
-				label: "Language_English",
-				icon: "languages/en",
-				texts: require(`./res/localization/en`)
-			},
-			{
-				locale: "nl",
-				label: "Language_Dutch",
-				icon: "languages/nl",
-				texts: require(`./res/localization/nl`)
-			}
-		]
-	}
 };
