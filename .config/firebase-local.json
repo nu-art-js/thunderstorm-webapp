@@ -14,17 +14,17 @@
   },
   "emulators": {
     "functions": {
-      "port": "8001"
+      "port": "8201"
     },
     "database": {
-      "port": "8002"
+      "port": "8202"
     },
     "firestore": {
-      "port": "8003"
+      "port": "8203"
     },
     "ui": {
       "enabled": true,
-      "port": "8009"
+      "port": "8209"
     }
   }
 }
